@@ -1,0 +1,39 @@
+Here is the text from the image you provided:
+
+---
+
+**General Template:**
+
+You:  
+Suppose you are {an expert in the interdisciplinary field of chemistry and AI.}  
+Given a set of reactant SMILES (Simplified Molecular Input Line Entry System), your task is {to employ your expertise in the interdisciplinary field of chemistry and AI to predict the properties of the molecules based on your knowledge of chemical property prediction.}  
+
+**Task-specific Template:**
+
+Please strictly follow the format, no other information can be provided. Given the SMILES string of a molecule, the task focuses on predicting molecular taste properties, specifically whether a molecule is sweet or bitter, based on the SMILES string representation of each molecule. You will be provided with several example molecules, each accompanied by a binary label indicating whether the molecule is sweet (1) or bitter (0). Please answer with only 1 or 0.
+
+**ICL:**
+
+smiles: N[C@@H](CCC(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)O)C(=O)O  
+sweet_or_bitter: 1  
+smiles: OO  
+sweet_or_bitter: 1  
+smiles: O=S(=O)([O-])c1ccccc1O.[Na+]  
+sweet_or_bitter: 1  
+smiles: C1CCNC1  
+sweet_or_bitter: 1  
+
+**Question:**
+
+smiles: COc1ccc(-c2cc(=O)c3c(OC)c(OC)cc3o2)cc1OC  
+sweet_or_bitter:  
+
+**Answer**
+
+ChatGPT:  
+Answer:  
+sweet_or_bitter: 1 (sweet)
+
+---
+
+I hope this helps! Let me know if you need any further assistance.

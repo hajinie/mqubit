@@ -1,0 +1,21 @@
+,Canonical SMILES,Taste
+170,O=C(Nc1cccc(c1)C(=O)[O-])/C=C/c1cccc(c1)O,0
+150,[O-]C(=O)[C@@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2,0
+165,COc1cc(O)c2c(c1O)OC[C@H](C2=O)Cc1ccc(c(c1)O)O,0
+110,CCOC(=O)/C=C/c1ccc(cc1)O,0
+90,COc1cc2c(cc1OC)C[C@@H](C2=O)C[C@@H]1CC[N@H+](CC1)Cc1ccccc1,0
+65,OCC1=CC(=O)C2=C(C)CC[C@@H]3[C@@H]([C@@H]12)OC(=O)C3=C,0
+149,[O-]C(=O)[C@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2,0
+159,COc1cc2[nH+]c3occc3c(c2cc1OC)OC,0
+162,COc1c(O)c2C(=O)[C@@H](COc2c(c1OC)O)Cc1ccc(cc1)O,0
+114,CCOC(=O)c1cc(OC)c(c(c1)OC)O,0
+74,CC(=CC[C@H]1C(=O)[C@H](C(=O)CC(C)C)C(=O)C(C1=O)(CC=C(C)C)CC=C(C)C)C,0
+89,CC[NH+](CC(=O)Nc1c(C)cccc1C)CC,0
+112,CCOC(=O)/C=C/c1ccc(c(c1)OC)O,0
+105,C/C=C/c1cc(OC)ccc1OC(=O)[C@H](CC)C,0
+148,[NH3+][C@H](C(=O)[O-])C[C@H](C(=O)[O-])Cc1ccc(cc1)Cl,0
+155,COc1c2oc(=O)ccc2cc2c1occ2,0
+154,COc1c2ccc(=O)oc2cc2c1cco2,0
+82,COc1cc(CCc2ccc3c(c2)OCO3)[nH+]c2c1cccc2,0
+96,COc1c2ccc(=O)oc2cc2c1cco2,0
+111,CCOC(=O)c1ccc(c(c1)OC)O,0

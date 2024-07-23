@@ -1,120 +1,120 @@
-smiles: [O-]C(=O)[C@@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2
-sweet_or_bitter: 
-
-smiles: COc1cc(O)c2c(c1O)OC[C@H](C2=O)Cc1ccc(c(c1)O)O
-sweet_or_bitter: 
-
-smiles: COc1ccc(cc1O)CCc1cccc(c1)C
-sweet_or_bitter: 
-
-smiles: CC(C(=O)OC(C)C)NC(=O)C(CC(=O)O)N
-sweet_or_bitter: 
-
-smiles: CCOc1ccc(cc1O)CCC(=O)c1ccccc1O
-sweet_or_bitter: 
-
-smiles: OCC(C(C(C(COC1OC(CO)C(C(C1O)O)O)O)O)O)O
-sweet_or_bitter: 
-
-smiles: COc1ccc(cc1O)NCc1ccccc1
-sweet_or_bitter: 
-
-smiles: [O-]C(=O)[C@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2
-sweet_or_bitter: 
-
-smiles: COc1cc2[nH+]c3occc3c(c2cc1OC)OC
-sweet_or_bitter: 
-
-smiles: CCOC(=O)/C=C/c1ccc(c(c1)OC)O
-sweet_or_bitter: 
-
-smiles: O=C1C=C(C)OS(=O)(=O)N1.COC(=O)C(NC(=O)C(CC(=O)O)N)Cc1ccccc1
-sweet_or_bitter: 
-
-smiles: COC1C(CO)OC(C(C1O)O)OC1(CO)OC(C(C1O)O)CO
-sweet_or_bitter: 
-
-smiles: CC(=CC[C@H]1C(=O)[C@H](C(=O)CC(C)C)C(=O)C(C1=O)(CC=C(C)C)CC=C(C)C)C
-sweet_or_bitter: 
-
-smiles: CC[NH+](CC(=O)Nc1c(C)cccc1C)CC
-sweet_or_bitter: 
-
-smiles: CC(C(NC(=O)C(CC(=O)O)N)COC(=O)CC)O
-sweet_or_bitter: 
-
-smiles: CC(C(NC(=O)C(CC(=O)O)N)COC(=O)C(C)C)C
-sweet_or_bitter: 
-
-smiles: COc1c(O)c2C(=O)[C@@H](COc2c(c1OC)O)Cc1ccc(cc1)O
-sweet_or_bitter: 
-
-smiles: COc1cc(CCc2ccc3c(c2)OCO3)[nH+]c2c1cccc2
-sweet_or_bitter: 
-
-smiles: OCC1O[C@@](C(C1Cl)O)(CCl)OC1OC(CO)C(C(C1O)O)O
-sweet_or_bitter: 
-
-smiles: OCC1=CC(=O)C2=C(C)CC[C@@H]3[C@@H]([C@@H]12)OC(=O)C3=C
-sweet_or_bitter: 
-
-smiles: COc1c2oc(=O)ccc2cc2c1occ2
-sweet_or_bitter: 
-
-smiles: CCCOC(=O)C(NC(=O)C(CC(=O)O)N)CC
-sweet_or_bitter: 
-
-smiles: C/C=C/c1cc(OC)ccc1OC(=O)[C@H](CC)C
-sweet_or_bitter: 
-
-smiles: [NH3+][C@H](C(=O)[O-])C[C@H](C(=O)[O-])Cc1ccc(cc1)Cl
-sweet_or_bitter: 
-
-smiles: ClCC1O[C@@](C(C1Cl)O)(CO)OC1OC(CO)C(C(C1O)O)Cl
-sweet_or_bitter: 
-
-smiles: COc1c2ccc(=O)oc2cc2c1cco2
-sweet_or_bitter: 
-
 smiles: CCCC(NC(=O)C(CC(=O)O)N)COC(=O)C
 sweet_or_bitter: 
 
-smiles: COc1ccc(cc1O)C1COc2c(C1)cccc2
-sweet_or_bitter: 
-
-smiles: CCOC(=O)c1ccc(c(c1)OC)O
-sweet_or_bitter: 
-
-smiles: ClCC1O[C@@](C(C1O)O)(CCl)OC1OC(CCl)C(C(C1O)O)Cl
-sweet_or_bitter: 
-
-smiles: COc1ccc(cc1O)C1OCc2c(C1)cccc2
-sweet_or_bitter: 
-
-smiles: Oc1ccc(cc1)C(=O)c1ccccc1C(=O)O
-sweet_or_bitter: 
-
-smiles: CCC(C(=O)OC)NC(=O)C(CC(=O)O)N
-sweet_or_bitter: 
-
-smiles: Oc1cccc(c1)C1OCc2c(S1)cccc2
+smiles: [O-]C(=O)[C@@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2
 sweet_or_bitter: 
 
 smiles: COc1ccc(cc1O)CCc1ccc2c(c1)OCO2
 sweet_or_bitter: 
 
-smiles: COc1cc2c(cc1OC)C[C@@H](C2=O)C[C@@H]1CC[N@H+](CC1)Cc1ccccc1
+smiles: COc1ccc(cc1O)NCc1ccccc1
 sweet_or_bitter: 
 
-smiles: CCOC(=O)/C=C/c1ccc(cc1)O
+smiles: COc1cc(CCc2ccc3c(c2)OCO3)[nH+]c2c1cccc2
 sweet_or_bitter: 
 
 smiles: COc1c2ccc(=O)oc2cc2c1cco2
 sweet_or_bitter: 
 
-smiles: O=C(Nc1cccc(c1)C(=O)[O-])/C=C/c1cccc(c1)O
+smiles: COc1ccc(cc1O)C1COc2c(C1)cccc2
+sweet_or_bitter: 
+
+smiles: CCOC(=O)/C=C/c1ccc(c(c1)OC)O
 sweet_or_bitter: 
 
 smiles: CCOC(=O)c1cc(OC)c(c(c1)OC)O
+sweet_or_bitter: 
+
+smiles: CCCOC(=O)C(NC(=O)C(CC(=O)O)N)CC
+sweet_or_bitter: 
+
+smiles: COc1cc(O)c2c(c1O)OC[C@H](C2=O)Cc1ccc(c(c1)O)O
+sweet_or_bitter: 
+
+smiles: [NH3+][C@H](C(=O)[O-])C[C@H](C(=O)[O-])Cc1ccc(cc1)Cl
+sweet_or_bitter: 
+
+smiles: CC(=CC[C@H]1C(=O)[C@H](C(=O)CC(C)C)C(=O)C(C1=O)(CC=C(C)C)CC=C(C)C)C
+sweet_or_bitter: 
+
+smiles: COC1C(CO)OC(C(C1O)O)OC1(CO)OC(C(C1O)O)CO
+sweet_or_bitter: 
+
+smiles: COc1c(O)c2C(=O)[C@@H](COc2c(c1OC)O)Cc1ccc(cc1)O
+sweet_or_bitter: 
+
+smiles: CCOC(=O)c1ccc(c(c1)OC)O
+sweet_or_bitter: 
+
+smiles: OCC1O[C@@](C(C1Cl)O)(CCl)OC1OC(CO)C(C(C1O)O)O
+sweet_or_bitter: 
+
+smiles: CC(C(=O)OC(C)C)NC(=O)C(CC(=O)O)N
+sweet_or_bitter: 
+
+smiles: ClCC1O[C@@](C(C1Cl)O)(CO)OC1OC(CO)C(C(C1O)O)Cl
+sweet_or_bitter: 
+
+smiles: Oc1cccc(c1)C1OCc2c(S1)cccc2
+sweet_or_bitter: 
+
+smiles: COc1ccc(cc1O)C1OCc2c(C1)cccc2
+sweet_or_bitter: 
+
+smiles: O=C(Nc1cccc(c1)C(=O)[O-])/C=C/c1cccc(c1)O
+sweet_or_bitter: 
+
+smiles: ClCC1O[C@@](C(C1O)O)(CCl)OC1OC(CCl)C(C(C1O)O)Cl
+sweet_or_bitter: 
+
+smiles: CC[NH+](CC(=O)Nc1c(C)cccc1C)CC
+sweet_or_bitter: 
+
+smiles: CC(C(NC(=O)C(CC(=O)O)N)COC(=O)C(C)C)C
+sweet_or_bitter: 
+
+smiles: COc1c2oc(=O)ccc2cc2c1occ2
+sweet_or_bitter: 
+
+smiles: Oc1ccc(cc1)C(=O)c1ccccc1C(=O)O
+sweet_or_bitter: 
+
+smiles: CCOc1ccc(cc1O)CCC(=O)c1ccccc1O
+sweet_or_bitter: 
+
+smiles: COc1cc2[nH+]c3occc3c(c2cc1OC)OC
+sweet_or_bitter: 
+
+smiles: COc1ccc(cc1O)CCc1cccc(c1)C
+sweet_or_bitter: 
+
+smiles: CCC(C(=O)OC)NC(=O)C(CC(=O)O)N
+sweet_or_bitter: 
+
+smiles: C/C=C/c1cc(OC)ccc1OC(=O)[C@H](CC)C
+sweet_or_bitter: 
+
+smiles: COc1c2ccc(=O)oc2cc2c1cco2
+sweet_or_bitter: 
+
+smiles: COc1cc2c(cc1OC)C[C@@H](C2=O)C[C@@H]1CC[N@H+](CC1)Cc1ccccc1
+sweet_or_bitter: 
+
+smiles: O=C1C=C(C)OS(=O)(=O)N1.COC(=O)C(NC(=O)C(CC(=O)O)N)Cc1ccccc1
+sweet_or_bitter: 
+
+smiles: CC(C(NC(=O)C(CC(=O)O)N)COC(=O)CC)O
+sweet_or_bitter: 
+
+smiles: OCC(C(C(C(COC1OC(CO)C(C(C1O)O)O)O)O)O)O
+sweet_or_bitter: 
+
+smiles: OCC1=CC(=O)C2=C(C)CC[C@@H]3[C@@H]([C@@H]12)OC(=O)C3=C
+sweet_or_bitter: 
+
+smiles: CCOC(=O)/C=C/c1ccc(cc1)O
+sweet_or_bitter: 
+
+smiles: [O-]C(=O)[C@H](C[C@@H](C(=O)[O-])[NH3+])Cc1c[nH]c2c1cccc2
 sweet_or_bitter: 
 

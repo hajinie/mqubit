@@ -1,6 +1,7 @@
 
 import numpy as np
 import os
+import pandas as pd
 import random
 from rdkit import Chem
 from rdkit.Chem import AllChem
@@ -11,6 +12,15 @@ CFG = {
     'NBITS': 2048,
     'SEED': 42,
 }
+
+def load_data(base_path = "data"):
+    test = pd.read_csv(f"{base_path}/test.csv")
+    train = pd.read_csv(f"{base_path}/train.csv")
+    return test, train
+
+
+
+
 
 def seed_everything(seed):
     random.seed(seed)

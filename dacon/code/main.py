@@ -6,29 +6,32 @@ from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.ensemble import RandomForestRegressor
 
 
-CFG = {
+parameters= {
     'NBITS': 2048,
     'SEED': 42,
-    'TEST_SIZE': 0.2,  # 테스트 사이즈
-    'N_ESTIMATORS': 100,  # RandomForest의 트리 개수
-}
+    'TEST_SIZE': 0.25,  # 테스트 사이즈
+    'N_ESTIMATORS': 200,
+    'MAX_DEPTH': 10,    
+    }
 
 # Seed 고정
-op.seed_everything(CFG['SEED'])
+op.seed_everything(parameters['SEED'])
 
 # 학습 데이터 로드 및 전처리
-chembl_data = pd.read_csv('../data/train.csv')
+test, chembl_data = op.load_data("../data")
 chembl_data['Fingerprint'] = chembl_data['Smiles'].apply(op.smiles_to_fingerprint)
+
 train_x = np.stack(chembl_data['Fingerprint'].values)
 train_y = chembl_data['pIC50'].values
 
 # 학습 및 검증 데이터 분리
-train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=CFG['TEST_SIZE'], random_state=CFG['SEED'])
+train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=parameters['TEST_SIZE'], random_state=parameters['SEED'])
 
 # 랜덤 포레스트 모델 정의 및 학습
 model = RandomForestRegressor(
-    n_estimators=CFG['N_ESTIMATORS'],
-    random_state=CFG['SEED']
+    n_estimators=parameters['N_ESTIMATORS'],
+    random_state=parameters['SEED'],
+    max_depth= parameters['MAX_DEPTH']
 )
 model.fit(train_x, train_y)
 

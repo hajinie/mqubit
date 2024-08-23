@@ -1,71 +1,53 @@
-import pandas as pd
+import option as op
 import numpy as np
-import os
-import random
-
-from rdkit import Chem
-from rdkit.Chem import AllChem
+import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error
+
 
 CFG = {
-    'NBITS':2048,
-    'SEED':42,
+    'NBITS': 2048,
+    'SEED': 42,
+    'TEST_SIZE': 0.2,  # 테스트 사이즈
+    'N_ESTIMATORS': 100,  # RandomForest의 트리 개수
 }
 
-def seed_everything(seed):
-    random.seed(seed)
-    os.environ['PYTHONHASHSEED'] = str(seed)
-    np.random.seed(seed)
-seed_everything(CFG['SEED']) # Seed 고정
+# Seed 고정
+op.seed_everything(CFG['SEED'])
 
-# SMILES 데이터를 분자 지문으로 변환
-def smiles_to_fingerprint(smiles):
-    mol = Chem.MolFromSmiles(smiles)
-    if mol is not None:
-        fp = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=CFG['NBITS'])
-        return np.array(fp)
-    else:
-        return np.zeros((CFG['NBITS'],))
-
-# 학습 ChEMBL 데이터 로드
-chembl_data = pd.read_csv('../data/train.csv')  # 예시 파일 이름
-chembl_data.head()
-
-train = chembl_data[['Smiles', 'pIC50']]
-train['Fingerprint'] = train['Smiles'].apply(smiles_to_fingerprint)
-
-train_x = np.stack(train['Fingerprint'].values)
-train_y = train['pIC50'].values
+# 학습 데이터 로드 및 전처리
+chembl_data = pd.read_csv('../data/train.csv')
+chembl_data['Fingerprint'] = chembl_data['Smiles'].apply(op.smiles_to_fingerprint)
+train_x = np.stack(chembl_data['Fingerprint'].values)
+train_y = chembl_data['pIC50'].values
 
 # 학습 및 검증 데이터 분리
-train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=0.3, random_state=42)
+train_x, val_x, train_y, val_y = train_test_split(train_x, train_y, test_size=CFG['TEST_SIZE'], random_state=CFG['SEED'])
 
-# 랜덤 포레스트 모델 학습
-model = RandomForestRegressor(random_state=CFG['SEED'])
+# 랜덤 포레스트 모델 정의 및 학습
+model = RandomForestRegressor(
+    n_estimators=CFG['N_ESTIMATORS'],
+    random_state=CFG['SEED']
+)
 model.fit(train_x, train_y)
 
-def pIC50_to_IC50(pic50_values):
-    """Convert pIC50 values to IC50 (nM)."""
-    return 10 ** (9 - pic50_values)
-
-# Validation 데이터로부터의 학습 모델 평가
+# 검증 데이터에 대한 예측 및 평가
 val_y_pred = model.predict(val_x)
-mse = mean_squared_error(pIC50_to_IC50(val_y), pIC50_to_IC50(val_y_pred))
-rmse = np.sqrt(mse)
+rmse = op.rmse(val_y,val_y_pred)
+r2_val = r2_score(val_y, val_y_pred)
+final_score = op.score(val_y, val_y_pred)
 
-print(f'RMSE: {rmse}')
+print(f'RMSE: {rmse:.4f}')
+print(f'R2_val: {r2_val:.4f}')
+print(f"Final Score: {final_score:.4f}")
 
-test = pd.read_csv('../data/test.csv')
-test['Fingerprint'] = test['Smiles'].apply(smiles_to_fingerprint)
-
-test_x = np.stack(test['Fingerprint'].values)
-
+# 테스트 데이터 예측 및 제출 파일 생성
+test_data = pd.read_csv('../data/test.csv')
+test_data['Fingerprint'] = test_data['Smiles'].apply(op.smiles_to_fingerprint)
+test_x = np.stack(test_data['Fingerprint'].values)
 test_y_pred = model.predict(test_x)
 
 submit = pd.read_csv('../data/sample_submission.csv')
-submit['IC50_nM'] = pIC50_to_IC50(test_y_pred)
-submit.head()
-
-submit.to_csv('../data/baseline_submit.csv', index=False)
+submit['IC50_nM'] = op.pIC50_to_IC50(test_y_pred)
+submit.to_csv('../data/SUBMIT.csv', index=False)
